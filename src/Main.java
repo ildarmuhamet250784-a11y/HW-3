@@ -8,15 +8,15 @@ public class Main {
         int d = 5430;
         byte k = 75;
         short l = 31000;
-        long s = 350000;
+        long s = 350000L;
         float h = 8.56f;
         double p = 3.1456;
-        System.out.println("Значение переменной d с типом int "+d);
-        System.out.println("Значение переменной k с типом byte "+k);
-        System.out.println("Значение переменной l с типом short "+l);
-        System.out.println("Значение переменной s с типом long "+s);
-        System.out.println("Значение переменной h с типом float "+h);
-        System.out.println("Значение переменной p с типом double "+p);
+        System.out.println("Значение переменной d с типом int " + d);
+        System.out.println("Значение переменной k с типом byte " + k);
+        System.out.println("Значение переменной l с типом short " + l);
+        System.out.println("Значение переменной s с типом long " + s);
+        System.out.println("Значение переменной h с типом float " + h);
+        System.out.println("Значение переменной p с типом double " + p);
         float g = 27.12f;
         long q = 987678965549L;
         float r = 2.786f;
@@ -25,96 +25,73 @@ public class Main {
         int o = 27897;
         byte t = 67;
 
-        byte L = 23;
-        byte A = 27;
-        byte E = 30;
-        int S = 480/(L+A+E);
-        System.out.println("На каждого ученика расчитано "+S+" листов бумаги");
+        byte x = 23;
+        byte a = 27;
+        byte e = 30;
+        int perStudent = 480 / (x + a + e);
+        System.out.println("На каждого ученика расчитано " + perStudent + " листов бумаги");
 
         byte capacity2Min = 16;//производительность 16 бутылок за 2 минуты
-        int capacity20Min = capacity2Min*10;//20min
-        int capacityDay = capacity2Min*30*24;//day
-        int capacity3Day = capacity2Min*30*24*3;//3day
-        int capacityMounth = capacity2Min*30*24*30;//mounth
-        System.out.println("За 20 минут машина произвела "+capacity20Min+" штук бутылок");
-        System.out.println("За сутки машина произвела "+capacityDay+" штук бутылок");
-        System.out.println("За 3 дня машина произвела "+capacity3Day+" штук бутылок");
-        System.out.println("За месяц машина произвела "+capacityMounth+" штук бутылок");
+        int capacity20Min = capacity2Min * 10;//20min
+        int capacityDay = capacity2Min * 30 * 24;//day
+        int capacity3Day = capacityDay * 3;//3day
+        int capacityMounth = capacityDay * 30;//mounth
+        System.out.println("За 20 минут машина произвела " + capacity20Min + " штук бутылок");
+        System.out.println("За сутки машина произвела " + capacityDay + " штук бутылок");
+        System.out.println("За 3 дня машина произвела " + capacity3Day + " штук бутылок");
+        System.out.println("За месяц машина произвела " + capacityMounth + " штук бутылок");
 
         byte totalCans = 120;
         byte oneClassWhite = 2;//white
-        byte oneClassBlack = 4;//black
-        int sum = totalCans/(oneClassWhite+oneClassBlack)*oneClassWhite;//sum white
-        int sum2 = totalCans/(oneClassWhite+oneClassBlack)*oneClassBlack;//sum brown
-        System.out.println("В школе, где 20 классов, нужно "+sum+" белой краски и "+sum2+" банок коричневой краски");
+        byte oneClassBrown = 4;//brown
+        int totalCansWhite = totalCans / (oneClassWhite + oneClassBrown) * oneClassWhite;//sum white
+        int totalCansBrown = totalCans / (oneClassWhite + oneClassBrown) * oneClassBrown;//sum brown
+        System.out.println("В школе, где 20 классов, нужно " + totalCansWhite + " белой краски и " + totalCansBrown + " банок коричневой краски");
 
         //Задача №6
         byte banana = 80;//1 banana weight
-        byte sumBanana = 5;
+        byte totalBananas = 5;
         byte milk = 105;//100ml milk
-        byte sumMilk = 2;
+        byte totalMilk = 2;
         byte iceCream = 100;//1 iceCream
-        byte sumIceCream = 2;
+        byte totalIceCream = 2;
         byte agg = 70;// 1 agg
-        byte sumAgg = 4;
-        int weight = (banana*sumBanana)+(milk*sumMilk)+(iceCream*sumIceCream)+(agg*sumAgg);// weight gr
-        double weightKg = weight*0.001;// weight kg
-        System.out.println("Вес завтрака "+weight+" граммов, что соответствует "+weightKg+" килограмм");
+        byte totalAgg = 4;
+        int weightGr = (banana * totalBananas) + (milk * totalMilk) + (iceCream * totalIceCream) + (agg * totalAgg);// weight gr
+        double weightKg = weightGr * 0.001;// weight kg
+        System.out.println("Вес завтрака " + weightGr + " граммов, что соответствует " + weightKg + " килограмм");
 
         //task7
         byte weightLoss = 7;
-        short weightLossInADay = 250;
-        short weightLossInADay2 = 500;
-        int days = (weightLoss*1000/weightLossInADay);
-        int days2 = (weightLoss*1000/weightLossInADay2);
-        int days3 = (weightLoss*1000)/(weightLossInADay+weightLossInADay2)*2;
-        System.out.println("Если спортсмен будет терять ежедневно по 250 гр., то ему потребуется "+days+" дней для похудения, а если по 500 гр., то потребуется "+days2+" дней. А в среднем для похудения потребуется "+days3+" дней.");
+        short weightLossInADay250 = 250;
+        short weightLossInADay500 = 500;
+        int numberOfDaysIf250 = (weightLoss * 1000 / weightLossInADay250);
+        int numberOfDaysIf500 = (weightLoss * 1000 / weightLossInADay500);
+        int averageNumberOfDays = (weightLoss * 1000) / (weightLossInADay250 + weightLossInADay500) * 2;
+        System.out.println("Если спортсмен будет терять ежедневно по 250 гр., то ему потребуется " + numberOfDaysIf250 + " дней для похудения, а если по 500 гр., то потребуется " + numberOfDaysIf500 + " дней. А в среднем для похудения потребуется " + averageNumberOfDays + " дней.");
 
         //task8
-        int masha = 67760;
-        int deniz = 83690;
-        int kristina = 76230;
-        long mashaNew = (masha*10)/100+masha;
-        long mashaYear = masha*12;
-        long mashaYearNew = mashaNew*12;
-        long difMasha = mashaYearNew-mashaYear;
-        System.out.println("Маша теперь получает "+mashaNew+" рублей. Годовой доход вырос на "+difMasha+" рублей");
+        int mashasSalary = 67760;
+        int denisSalary = 83690;
+        int kristinasSalary = 76230;
+        long mashasNewSalary = (mashasSalary * 10) / 100 + mashasSalary;
+        long mashasYearSalary = mashasSalary * 12;
+        long mashasYearNewSalary = mashasNewSalary * 12;
+        long difMashasYearSalary = mashasYearNewSalary - mashasYearSalary;
+        System.out.println("Маша теперь получает " + mashasNewSalary + " рублей. Годовой доход вырос на " + difMashasYearSalary + " рублей");
 
-        long denizNew = (deniz*10)/100+deniz;
-        long denizYear = deniz*12;
-        long denizYearNew = denizNew*12;
-        long difDeniz = denizYearNew-denizYear;
-        System.out.println("Денис теперь получает "+denizNew+" рублей. Годовой доход вырос на "+difDeniz+" рублей");
+        long denizNewSalary = (denisSalary * 10) / 100 + denisSalary;
+        long denizYearSalary = denisSalary * 12;
+        long denizYearNewSalary = denizNewSalary * 12;
+        long difDenizYearSalary = denizYearNewSalary - denizYearSalary;
+        System.out.println("Денис теперь получает " + denizNewSalary + " рублей. Годовой доход вырос на " + difDenizYearSalary + " рублей");
 
-        long kristinaNew = (kristina*10)/100+kristina;
-        long kristinaYear = kristina*12;
-        long kristinaYearNew = kristinaNew*12;
-        long difKristina = kristinaYearNew-kristinaYear;
-        System.out.println("Кристина теперь получает "+kristinaNew+" рублей. Годовой доход вырос на "+difKristina+" рублей");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        long kristinaNewSalary = (kristinasSalary * 10) / 100 + kristinasSalary;
+        long kristinaYearSalary = kristinasSalary * 12;
+        long kristinaYearNewSalary = kristinaNewSalary * 12;
+        long difKristinaYearSalary = kristinaYearNewSalary - kristinaYearSalary;
+        System.out.println("Кристина теперь получает " + kristinaNewSalary + " рублей. Годовой доход вырос на " + difKristinaYearSalary + " рублей");
 
 
     }
-    }
+}
