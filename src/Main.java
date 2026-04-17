@@ -5,30 +5,30 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.println("Hoşgeldiniz!");
-        int d = 5430;
-        byte k = 75;
-        short l = 31000;
-        long s = 350000L;
-        float h = 8.56f;
-        double p = 3.1456;
-        System.out.println("Значение переменной d с типом int " + d);
-        System.out.println("Значение переменной k с типом byte " + k);
-        System.out.println("Значение переменной l с типом short " + l);
-        System.out.println("Значение переменной s с типом long " + s);
-        System.out.println("Значение переменной h с типом float " + h);
-        System.out.println("Значение переменной p с типом double " + p);
-        float g = 27.12f;
-        long q = 987678965549L;
-        float r = 2.786f;
-        short n = 569;
-        short w = -159;
-        int o = 27897;
-        byte t = 67;
+        int deposit = 5430;
+        byte remainder = 75;
+        short tickets = 31000;
+        long trailerPrice = 350000L;
+        float gradeAtSchool = 8.56f;
+        double numberPi = 3.1456;
+        System.out.println("Значение переменной deposit с типом int " + deposit);
+        System.out.println("Значение переменной remainder с типом byte " + remainder);
+        System.out.println("Значение переменной tickets с типом short " + tickets);
+        System.out.println("Значение переменной trailerPrice с типом long " + trailerPrice);
+        System.out.println("Значение переменной gradeAtSchool с типом float " + gradeAtSchool);
+        System.out.println("Значение переменной numberPi с типом double " + numberPi);
+        float weightOfApples = 27.12f;
+        long distanceToThePlanet = 987678965549L;
+        float index = 2.786f;
+        short priceOfCandies = 569;
+        short debtForTravel = -159;
+        int payment = 27897;
+        byte clientsAge = 67;
 
-        byte x = 23;
-        byte a = 27;
-        byte e = 30;
-        int perStudent = 480 / (x + a + e);
+        byte lyudmilasStudents = 23;
+        byte annasStudents = 27;
+        byte catherinesStudents = 30;
+        int perStudent = 480 / (lyudmilasStudents + annasStudents + catherinesStudents);
         System.out.println("На каждого ученика расчитано " + perStudent + " листов бумаги");
 
         byte capacity2Min = 16;//производительность 16 бутылок за 2 минуты
